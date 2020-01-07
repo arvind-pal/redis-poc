@@ -20,7 +20,11 @@ public class RedisConfig {
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        return new JedisConnectionFactory();
+    	JedisConnectionFactory connection1 = new JedisConnectionFactory();
+    	connection1.setHostName("redis-12288.c99.us-east-1-4.ec2.cloud.redislabs.com");
+    	connection1.setPort(12288);
+    	connection1.setPassword("KjolpHb3qqFycAThFw34gvmaDEjjRuiT");
+        return connection1;
     }
 
     @Bean
